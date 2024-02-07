@@ -1,0 +1,22 @@
+.container{
+    display:block;
+    margin:10px;
+}
+
+.data-list{
+    display:inline;
+    color: olivedrab;
+    font-weight: bolder;
+    margin-left: 40px;
+}
+
+button{
+    color:black;
+    background-color: orange;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgba(250, 158, 0, 0.5);
+    cursor: pointer;
+    margin:20px;
+}

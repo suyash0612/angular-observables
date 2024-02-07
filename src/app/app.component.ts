@@ -27,21 +27,55 @@ export class AppComponent {
       observer.next(3);
     }, 3000);
     setTimeout(() => {
+      observer.error(new Error('Something went wrong, please try again later!'));  
+    }, 3000);          //after error event -> no data is emitted indicating data stream is done (high priority than complete event)
+    setTimeout(() => {
       observer.next(4);
-    }, 4000);
+    }, 5000);
     setTimeout(() => {
       observer.next(5);
-    }, 5000);
+    }, 6000);
+    setTimeout(() => {
+      observer.complete();
+    }, 3000);     // after complete event -> no data is emitted indicating data stream is done
   });
 
   // OBSERVER - this is the observer for above observable - EVENT LISTENER (any event listened)
   // whenever new data will be emitted from observable , this part of code will be notified
+
   getAsyncData(){
-    // callback fn -> next / error / complete event
-    this.myObservable.subscribe((val : any)=> {
-      // this.data = val;
-      this.data.push(val);            // this part is the handler where we pass the data
-    });
+
+    //##  Deprecated  ##//
+
+    // // callback fn -> next / error / complete event
+    // this.myObservable.subscribe((val : any)=> {
+    //   // this.data = val;
+    //   this.data.push(val);            // this part is the handler where we pass the data
+    // },
+    // (err:any) => {
+    //   alert(err.message)
+    // },
+    // () => {
+    //   alert("all data is streamed.")
+    // }
+    // );
+
+    //##  New  ##//
+    this.myObservable.subscribe({
+      next : (val:any) => {                      // arrow fn points to outer scope where data is actually located
+        this.data.push(val);                    // else the scope was within the suscribe()
+      },
+      error(err){
+        alert(err.message);
+      },
+      complete(){
+        alert("all data is streamed.");
+      }
+    } 
+    );
+
+
+
   }
 
 

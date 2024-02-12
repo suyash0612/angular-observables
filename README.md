@@ -1,7 +1,7 @@
 # OBSERVABLES
 
 ## Commit 1
-Setup a basic observable , observer(suscriber) , event handler
+Setup a basic observable , observer(subscriber) , event handler
 
 1. observable will emit the events
 2. observer will listen to the events
@@ -19,3 +19,5 @@ err callback fn has a paramter err , once emitted it is assumed data streaming i
 next callback fn has paramter any type , once emitted events are emitted once with every next call
 
 
+## commit 3
+fromEvent Operator - used to create observable events using html elements.

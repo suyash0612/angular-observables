@@ -3,3 +3,9 @@
   <button (click)="getAsyncData()">Get Data</button>
   <div class="data-list" *ngFor="let x of data">{{ x }}</div>
 </div>
+
+<div class="container">
+  <h2>Create Observable Using fromEvent Operator</h2>
+  <button #createitemref>Create New Item</button>
+  <div id="data-id"></div>
+</div>

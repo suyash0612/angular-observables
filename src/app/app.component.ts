@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { Observable, count } from 'rxjs';
+import { Observable, count, from, of } from 'rxjs';
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -78,6 +78,8 @@ export class AppComponent implements AfterViewInit{
 
 
   }
+
+  // fROMEVENT 
   btnObservable : any;
   @ViewChild('createitemref')
   btnForObs! : ElementRef;
@@ -102,6 +104,46 @@ export class AppComponent implements AfterViewInit{
     div.className = 'data-list';
     let ele = document.getElementById('data-id');
     ele?.appendChild(div);
+  }
+
+  // of Operator
+
+  ofObs = of([1,2,3,4,5],[6,7,8,9,10],20,'a',true);
+
+  promise = new Promise((resolve , reject)=>{
+    resolve([10,20,30,40,50]);
+  })
+
+  fromObs = from(this.promise);
+  
+
+  getDataFromOfOperator(){
+    alert('Of Operator')
+    this.ofObs.subscribe({
+      next : (val : any) =>{
+        console.log(val);
+      },
+      error : (er)=>{
+        alert('Error Generated' + er);
+      },
+      complete : ()=>{
+        alert("all event completed")
+      }
+    })
+    alert('From Operator')
+    this.fromObs.subscribe({
+      next : (val : any) =>{
+        console.log(val);
+      },
+      error : (er)=>{
+        alert('Error Generated' + er);
+      },
+      complete : ()=>{
+        alert("all event completed")
+      }
+    })
+
+
   }
 
 

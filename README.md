@@ -21,3 +21,8 @@ next callback fn has paramter any type , once emitted events are emitted once wi
 
 ## commit 3
 fromEvent Operator - used to create observable events using html elements.
+
+## commit 4
+Of And From Operator - returns observable events.
+Of - returns with the same format passed
+From - iterated through the parameter (eg list / string) 

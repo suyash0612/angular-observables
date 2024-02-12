@@ -31,3 +31,6 @@ From - iterated through the parameter (eg list / string)
 map And filter Operator - returns modified obs values.
 map - modify complete values
 filter - shortlist values / filter them 
+
+## commit 5
+Service / Subjects used for data transfer between components.

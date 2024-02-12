@@ -1,0 +1,19 @@
+.container {
+    max-width: 600px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding to the container */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.container > div {
+    margin-bottom: 10px; /* Add spacing between each task */
+    padding: 10px; /* Add padding to each task */
+    background-color: #f9f9f9; /* Background color for each task */
+    border: 1px solid #ddd; /* Add border for each task */
+    border-radius: 3px; /* Add border radius for rounded corners */
+}
+
+.container:hover{
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.9);
+}

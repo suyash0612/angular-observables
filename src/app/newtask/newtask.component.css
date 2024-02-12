@@ -1,0 +1,59 @@
+.container{
+    background-color: rgb(77, 70, 80);
+    max-width: 600px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding to the container */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    max-width: 80%; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 500px; /* Adjust width as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Background color */
+    transition: border-color 0.3s ease-in-out; /* Add transition for smoother hover/focus effects */
+}
+
+/* Input Field Focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #66afe9; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Add box shadow when focused */
+}
+
+input:hover{
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.9);
+}
+
+/* Button */
+button {
+    margin: 0 auto;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Background color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease-in-out; /* Add transition for smoother hover/focus effects */
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #ff8903; /* Change background color on hover */
+    box-shadow: 0 0 10px rgba(255, 170, 1, 0.7);
+}
+
+/* Button Focus */
+button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add box shadow when focused */
+}

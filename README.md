@@ -26,3 +26,8 @@ fromEvent Operator - used to create observable events using html elements.
 Of And From Operator - returns observable events.
 Of - returns with the same format passed
 From - iterated through the parameter (eg list / string) 
+
+## commit 4
+map And filter Operator - returns modified obs values.
+map - modify complete values
+filter - shortlist values / filter them 

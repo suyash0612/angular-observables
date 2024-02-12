@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { Observable, count, from, of } from 'rxjs';
+import { Observable, count, filter, from, map, of } from 'rxjs';
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -115,7 +115,31 @@ export class AppComponent implements AfterViewInit{
   })
 
   fromObs = from(this.promise);
+
+  Obs = from([10,20,30,40,50,60])
   
+  transformedObs_withmap = this.Obs.pipe(map((val : any)=>{
+    return val * 5;
+  }))
+
+  transformedObs_withfilter = this.Obs.pipe(filter((val:any)=>{
+    return val%4===0;
+  }))
+  
+  // Together first perfomr map on array then filter on the result
+  transformedObs_withmapfilter = this.Obs.pipe(
+    map((val : any)=>{
+      return val * 5;
+    }),
+    filter((val:any)=>{
+    return val%4===0;
+  }))
+
+  // shortcut
+
+  myTransObs = from([1,2,3,4,5,6,7,8]).pipe(map((val)=>{
+    return 2 * val ;
+  }))
 
   getDataFromOfOperator(){
     alert('Of Operator')
@@ -140,6 +164,31 @@ export class AppComponent implements AfterViewInit{
       },
       complete : ()=>{
         alert("all event completed")
+      }
+    })
+
+    this.transformedObs_withmap.subscribe({
+      next : (val) =>{
+        console.log('Map');
+        console.log(val);
+      }
+    })
+    this.transformedObs_withfilter.subscribe({
+      next : (val) =>{
+        console.log('Filter');
+        console.log(val);
+      }
+    })
+    this.transformedObs_withmapfilter.subscribe({
+      next : (val) =>{
+        console.log('Map & Filter');
+        console.log(val);
+      }
+    })
+    this.myTransObs.subscribe({
+      next : (val) =>{
+        console.log('Shortcut');
+        console.log(val);
       }
     })
 

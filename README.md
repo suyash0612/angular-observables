@@ -42,3 +42,7 @@ subject - multicast => return single data with ajax call
 
 ## commit 6
 Behaviour Subject -> it has a initial value whereas subject has its missing
+
+## commit 6
+Replay Subject -> used to pass previously passed data to all subscribers through a buffer.
+here buffer size can be manipulated by passing the threshold in replaysubject(buffersize)

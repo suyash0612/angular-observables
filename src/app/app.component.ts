@@ -91,11 +91,11 @@ export class AppComponent implements AfterViewInit{
 
   buttonClick(){
     let count = 0;
-    this.btnObservable = fromEvent(this.btnForObs.nativeElement,'click')
-  .subscribe((item)=>{
-    console.log(item);
-    this.createDiv(++count);
-  });
+  //   this.btnObservable = fromEvent(this.btnForObs.nativeElement,'click')
+  // .subscribe((item)=>{
+  //   console.log(item);
+  //   this.createDiv(++count);
+  // });
   }
 
   createDiv(count: number){

@@ -1,0 +1,29 @@
+<div class="flex-container">
+    <h2>Unsubscribe and Subscribe Observables</h2>
+    <div class="row">
+        <div class="col">
+            <h4>Subscriber1</h4>
+            <button (click)="onSubscribe1()">SUBSCRIBE</button>
+            <button (click)="onUnSubscribe1()">UNSUBSCRIBE</button>
+            <div class="value" *ngFor="let item of data1">
+                {{item}}
+            </div>
+        </div>
+        <div class="col">
+            <h4>Subscriber2</h4>
+            <button (click)="onSubscribe2()">SUBSCRIBE</button>
+            <button (click)="onUnSubscribe2()">UNSUBSCRIBE</button>
+            <div class="value" *ngFor="let item of data2">
+                {{item}}
+            </div>
+        </div>
+        <div class="col">
+            <h4>Subscriber3</h4>
+            <button (click)="onSubscribe3()">SUBSCRIBE</button>
+            <button (click)="onUnSubscribe3()">UNSUBSCRIBE</button>
+            <div class="value" *ngFor="let item of data3">
+                {{item}}
+            </div>
+        </div>
+    </div>
+</div>

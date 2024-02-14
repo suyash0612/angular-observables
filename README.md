@@ -72,3 +72,6 @@ completion.
 • An Observable can return both synchronous and
 asynchronous data based on how it is
 implemented.
+
+## commit 9
+Subscribe and Unsubscribe an observable

@@ -15,7 +15,7 @@ export class SubjectComponent implements OnInit {
     })
 
     // SUBSCRIBER 1
-    obs.subscribe((data)=> {+console.log("Observable "+data)});
+    obs.subscribe((data)=> {console.log("Observable "+data)});
     // SUBSCRIBER 2
     obs.subscribe((data)=> {console.log("Observable "+data)});
 

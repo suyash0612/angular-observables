@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { SubjectComponent } from './subject/subject.component';
 import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
     ShowtaskComponent,
     SubjectComponent,
     BehaviourSubjectComponent,
-    ReplaySubjectComponent
+    ReplaySubjectComponent,
+    AsyncSubjectComponent
   ],
   imports: [
     BrowserModule,

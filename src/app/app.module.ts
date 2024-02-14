@@ -9,6 +9,7 @@ import { SubjectComponent } from './subject/subject.component';
 import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { PromiseObservableComponent } from './promise-observable/promise-observable.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AsyncSubjectComponent } from './async-subject/async-subject.component';
     SubjectComponent,
     BehaviourSubjectComponent,
     ReplaySubjectComponent,
-    AsyncSubjectComponent
+    AsyncSubjectComponent,
+    PromiseObservableComponent
   ],
   imports: [
     BrowserModule,

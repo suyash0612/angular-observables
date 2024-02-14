@@ -47,6 +47,28 @@ Behaviour Subject -> it has a initial value whereas subject has its missing
 Replay Subject -> used to pass previously passed data to all subscribers through a buffer.
 here buffer size can be manipulated by passing the threshold in replaysubject(buffersize)
 
-## commit 6
+## commit 7
 Async Subject -> it emits a single value , that is the last value before the complete 
 signal is called
+
+## commit 8
+Promise vs Observable
+• A promise is native to JavaScript.
+• An Observable is not native to JavaScript. It is
+provided by a third party library called RJS.
+
+• Promise is eager. It returns the data as soon as a promise is created 
+• Observable is lazy. It only emits the data if there
+is a subscriber for that observable.
+
+• Promise can emit only a single value.
+• Observables can emit single or multiple values.
+
+• Promise has methods for success & error.
+• Observable has methods for success, error and
+completion.
+
+• Promise always returns asynchronous data.
+• An Observable can return both synchronous and
+asynchronous data based on how it is
+implemented.
